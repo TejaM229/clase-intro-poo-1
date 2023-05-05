@@ -18,6 +18,9 @@ class Vehicle:
         self.color = new_color
         print(f"The vehicle is now {self.color}.")
 
+    def movement(self):
+        print("El vehiculo se esta moviendo")
+
 vehicle1 = Vehicle("peugeot","301","Blanco")
 print (vehicle1.make, vehicle1.color, vehicle1.model)
 
@@ -33,6 +36,9 @@ class Car(Vehicle):
     def open_doors(self):
         print(f"The {self.num_doors}-door car has opened its doors.")
 
+    def movement(self):
+        print("El carro se esta moviendo")
+
 class Truck(Vehicle):
     def __init__(self, make, model, color, cargo_capacity):
         super().__init__(make, model, color)
@@ -41,12 +47,16 @@ class Truck(Vehicle):
     def load(self):
         print(f"The truck has been loaded with {self.cargo_capacity} tons of cargo.")
 
+    def movement(self):
+        print("El camion se esta moviendo")
 
 
 car1 = Car("Ford", "Mustang", "Red", 2)
-car1.start_engine()
-car1.open_doors()
+# car1.start_engine()
+# car1.open_doors()
+car1.movement()
 
 truck1 = Truck("Chevrolet", "Silverado", "Black", 5)
-truck1.start_engine()
-truck1.load()
+# truck1.start_engine()
+# truck1.load()
+truck1.movement()
