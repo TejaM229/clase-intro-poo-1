@@ -52,11 +52,11 @@ class Truck(Vehicle):
 
 
 car1 = Car("Ford", "Mustang", "Red", 2)
-# car1.start_engine()
-# car1.open_doors()
+car1.start_engine()
+car1.open_doors()
 car1.movement()
 
 truck1 = Truck("Chevrolet", "Silverado", "Black", 5)
-# truck1.start_engine()
-# truck1.load()
+truck1.start_engine()
+truck1.load()
 truck1.movement()
