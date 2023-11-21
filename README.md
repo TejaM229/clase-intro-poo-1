@@ -4,6 +4,24 @@ Este repositorio contiene ejemplos y explicaciones sobre los conceptos fundament
 
 <img src="img/programate-academy-color-.png" alt="Logo Programate">
 
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+
+git clone git@github.com:JSand89/my-movie-app-c9.git
+
+
+2. Navega al directorio del proyecto:
+
+cd my-movie-app-c9
+
+3. Tu o uno de tus companeros debe cambiar el origen del repositorio 
+
+git remote -v
+
+git remote remove origin
+
+git remote add origin <nueva_url_del_repositorio>
 ## class.py
 
 En este archivo se encuentra una explicación detallada sobre las clases, atributos, métodos e instancias en POO. Proporciona ejemplos claros y simples para comprender estos conceptos fundamentales. Recomendamos revisar este archivo como punto de partida para comprender la programación orientada a objetos.
