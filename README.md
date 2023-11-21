@@ -8,12 +8,12 @@ Este repositorio contiene ejemplos y explicaciones sobre los conceptos fundament
 
 1. Clona este repositorio en tu máquina local:
 
-git clone git@github.com:JSand89/my-movie-app-c9.git
+git clone https://github.com/JSand89/clase-intro-poo
 
 
 2. Navega al directorio del proyecto:
 
-cd my-movie-app-c9
+cd clase-intro-poo
 
 3. Tu o uno de tus companeros debe cambiar el origen del repositorio 
 
