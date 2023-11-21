@@ -23,10 +23,15 @@ class Vehicle:
         self.color = new_color
         print(f"El nuevo color del  vehiculo es: {self.color}.")
 
+    def print_atributs(self):
+        print(self.color,self.make,self.model)
+
 #en esta linea estamos creando un objeto, otra forma que vamos a encontrar para decir esto es que estamos instanciando una clase
 vehicle1 = Vehicle("peugeot","301","Blanco")
 print (vehicle1.make, vehicle1.color, vehicle1.model)
-
+vehicle2 = Vehicle("Ford","Explorer","2002")
+vehicle2.print_atributs()
+print (vehicle2.make)
 # Iniciamos el motor del vehiculo 1 
 vehicle1.start_engine()
 #cambiamos el color del vehiculo 1 

@@ -63,3 +63,5 @@ truck1.start_engine()
 truck1.load()
 truck1.move()
 car1.move()
+
+#la proxima poner el ejemplo de personajes de viedo juegos, 
