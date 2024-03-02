@@ -89,3 +89,104 @@ print("Edad:", estudiante1.get_edad())
 print("Programa:", estudiante1.programa)
 print("Cohorte:", estudiante1.cohorte)
 print(estudiante1.estudiar()) 
+
+#--------en esta linea estamos creando la clase animal--------------------------------
+class Animal:
+    def __init__(self, nombre, edad):
+        self._nombre_mascota = nombre
+        self._edad_mascota = edad
+
+    def get_nombre(self):
+        return self._nombre_mascota
+
+    def set_nombre(self, nombre):
+        self._nombre_mascota = nombre
+
+    def get_edad(self):
+        return self._edad_mascota
+
+    def set_edad(self, edad):
+        self._edad_mascota = edad
+
+    def resumen(self, alimentacion, ejercicio):
+        resumen = f"La mascota de {estudiante1.get_nombre()}, llamad@ {self.get_nombre()} tiene {self.get_edad()} años."
+
+        if alimentacion < 2:
+            resumen += """
+
+¡Alimenta bien a tu mascota, pendej@!
+Ve al veterinario y consulta la dieta adecuada de acuerdo a su raza."""
+        elif alimentacion >= 2:
+            resumen += """
+
+¿Estás seguro que esa es la alimentación adecuada de tu mascota?
+Para que estés segur@, ve al veterinario y consulta la dieta adecuada de acuerdo a su raza."""
+
+        if ejercicio < 1:
+            resumen += """
+
+¡Juega con tu mascota, pendej@!
+El ejercicio es importante para su bienestar, además aprovechas y también haces algo de ejercicio... 
+No sea que te engordes por estar sedentari@."""
+        elif ejercicio >= 1:
+            resumen += """
+
+El ejercicio es importante para el bienestar de tus mascotas,
+recuerda hacerlo mínimo una vez al día por 30 minutos, además aprovechas y también haces algo de ejercicio... 
+No sea que te engordes por estar sedentari@."""
+
+        return resumen
+
+
+print()
+print("Hola estudiante de análisis de datos, espero te encuentres bien.")
+print()
+
+
+def cuestionario_mascota():
+    respuesta = input("¿Tienes mascota? (si/no): ").lower()
+
+    if respuesta == "si":
+        print("¡Excelente! Vamos a empezar el cuestionario sobre tu mascota.")
+        print()
+        print("Ingresa los siguientes datos de tu mascota")
+        print()
+        # Nombre y edad mascota
+        nombre_mascota = input("Escribe el nombre de tu mascota: ")
+        print()
+        while True:
+            try:
+                edad_mascota = int(input("Escribe la edad de tu mascota en números: "))
+                break
+            except ValueError:
+                print("Por favor, ingresa un número válido para la edad de tu mascota.")
+
+        # Cuidados diarios de la mascota
+        print()
+        while True:
+            try:
+                alimentacion_mascota = int(input("Escribe cuantas veces al día alimentas a tu mascota en números: "))
+                break
+            except ValueError:
+                print("Por favor, ingresa un número válido para la alimentación de tu mascota.")
+        print()
+        while True:
+            try:
+                ejercicio_mascota = int(input("Escribe cuantas veces al día juegas con tu mascota en números: "))
+                break
+            except ValueError:
+                print("Por favor, ingresa un número válido para las veces que juegas con tu mascota.")
+
+        # Crear instancia de Animal y mostrar resumen
+        mascota = Animal(nombre_mascota, edad_mascota)
+        print()
+        print(mascota.resumen(alimentacion_mascota, ejercicio_mascota))
+    elif respuesta == "no":
+        print("Entiendo, no tienes mascota. ¡Hasta luego!")
+    else:
+        print("Lo siento, no entiendo tu respuesta.")
+        print("Respuesta no válida. Por favor, responde 'si' o 'no'.")
+        cuestionario_mascota()  # Llamar recursivamente hasta obtener una respuesta válida
+
+
+cuestionario_mascota()
