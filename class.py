@@ -36,4 +36,56 @@ print (vehicle2.make)
 vehicle1.start_engine()
 #cambiamos el color del vehiculo 1 
 vehicle1.change_color("Red")
+#--------en esta linea estamos creando la clase persona--------------------------------
+class Persona:
+    def __init__(self, nombre, edad):
+        self._nombre = nombre
+        self._edad = edad
 
+    def get_nombre(self):
+        return self._nombre
+
+    def set_nombre(self, nombre):
+        self._nombre = nombre
+
+    def get_edad(self):
+        return self._edad
+
+    def set_edad(self, edad):
+        self._edad = edad
+
+    def resumen(self):
+        return f"Resumen, del estudiante: {self.get_nombre()} tiene {self.get_edad()} años."
+
+
+class Estudiante(Persona):
+    def __init__(self, nombre, edad, programa, cohorte):
+        super().__init__(nombre, edad)
+        self.programa = programa
+        self.cohorte = cohorte
+
+    def estudiar(self):
+        return f"{self.get_nombre()} está estudiando {self.programa} en la cohorte {self.cohorte}."
+
+
+# Obtener datos del usuario
+print()
+print("Hola estudiante de análisis de datos, espero te encuentres bien.")
+print("Ingresa los siguientes datos")
+print()
+nombre = input("Escribe tu nombre completo: ")
+edad = int(input("Escribe tu edad en números: "))
+programa = input("Escribe el programa académico: ")
+cohorte = int(input("Escribe tu cohorte en números: "))
+
+# Crear un objeto de la clase Estudiante
+estudiante1 = Estudiante(nombre, edad, programa, cohorte)
+
+# Acceder a atributos y métodos de la clase Estudiante y de su clase base Persona
+print()
+print(estudiante1.resumen())
+print("Nombre:", estudiante1.get_nombre())
+print("Edad:", estudiante1.get_edad())
+print("Programa:", estudiante1.programa)
+print("Cohorte:", estudiante1.cohorte)
+print(estudiante1.estudiar()) 
